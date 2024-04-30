@@ -1,0 +1,13 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Wgerenutti_CustomHomePage::css/banners.css"/>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Wgerenutti\CustomHomePage\Block\Banner" name="custom_homepage.banner" template="Wgerenutti_CustomHomePage::banner.phtml"/>
+            <block class="Wgerenutti\CustomHomePage\Block\HowItWorks" name="custom_homepage.how_it_works" template="Wgerenutti_CustomHomePage::how_it_works.phtml"/>
+            <block class="Wgerenutti\CustomHomePage\Block\ProductCarousel" name="custom_homepage.product_carousel" template="Wgerenutti_CustomHomePage::product_carousel.phtml"/>
+            <block class="Wgerenutti\CustomHomePage\Block\BannerGrid" name="custom_homepage.banner_grid" template="Wgerenutti_CustomHomePage::banner_grid.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,24 @@
+{
+    "name": "wgerenutti/customhomepage",
+    "description": "Magento 2 module to customize the home page",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "require": {
+        "php": "^7",
+        "magento/framework": "*",
+        "magento/module-cms": "*",
+        "magento/module-catalog": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Wgerenutti\\CustomHomePage\\": ""
+        }
+    }
+}

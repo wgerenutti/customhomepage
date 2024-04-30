@@ -1,0 +1,12 @@
+<div class="how-it-works">
+    <h2>Como funciona:</h2>
+    <ul>
+        <?php foreach ($block->getSteps() as $step) : ?>
+            <li>
+                <img src="<?php echo $this->getViewFileUrl('Wgerenutti_CustomHomePage::images/' . $step['icon']); ?>" alt="<?php echo $step['title']; ?>">
+                <h3><?php echo $step['title']; ?></h3>
+                <p><?php echo $step['description']; ?></p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>

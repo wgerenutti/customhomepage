@@ -1,0 +1,37 @@
+<h2>Lançamentos:</h2>
+<div id="product-carousel" class="owl-carousel">
+    <?php
+    $products = $block->getProducts();
+    $counter = 0;
+    foreach ($products as $product) :
+        if ($counter >= 8) break;
+        $productUrl = $product->getProductUrl();
+    ?>
+        <div class="item">
+            <a href="<?php echo $productUrl; ?>">
+                <img src="<?php echo $product->getImageUrl(); ?>" alt="<?php echo $product->getName(); ?>">
+                <h3><?php echo $product->getName(); ?></h3>
+                <p><?php echo $product->getShortDescription(); ?></p>
+            </a>
+        </div>
+    <?php
+        $counter++;
+    endforeach;
+    ?>
+</div>
+
+<script>
+    require(['jquery', 'owlCarousel'], function($) {
+        $(document).ready(function() {
+            $("#product-carousel").owlCarousel({
+                items: 4,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                dots: true,
+                nav: false
+            });
+        });
+    });
+</script>
